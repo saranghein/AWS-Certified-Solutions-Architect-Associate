@@ -9,7 +9,7 @@
 - 필터를 사용해 특정 서비스, 리전, 계정, 인스턴스, 태그 등에 대한 예산 설정 가능
     - AWS 리소스에 태그 값을 지정하여 특정 태그에 대한 리소스만 예산 설정 가능
 
-[:pencil2:실습](https://www.notion.so/0e7f115a9793400e8ebb291f6d5ec61f?pvs=21)
+:pencil2:[실습](https://www.notion.so/0e7f115a9793400e8ebb291f6d5ec61f?pvs=21)
 
 ## [AWS Cost Explorer](https://us-east-1.console.aws.amazon.com/costmanagement/home#/cost-explorer?chartStyle=STACK&costAggregate=unBlendedCost&endDate=2024-05-31&excludeForecasting=false&filter=%5B%5D&futureRelativeRange=CUSTOM&granularity=Monthly&groupBy=%5B%22Service%22%5D&historicalRelativeRange=LAST_6_MONTHS&isDefault=true&reportName=%EC%83%88%20%EB%B9%84%EC%9A%A9%20%EB%B0%8F%20%EC%82%AC%EC%9A%A9%EB%9F%89%20%EB%B3%B4%EA%B3%A0%EC%84%9C&showOnlyUncategorized=false&showOnlyUntagged=false&startDate=2023-12-01&usageAggregate=undefined&useNormalizedUnits=false) - 비용 탐색기
 
@@ -19,7 +19,7 @@
 - 보고서 매개 변수를 지정한 다음에 csv 파일로 다운로드 가능
 - ‘보고서 라이브러리에 저장’을 통해 보고서 저장 가능
 
-[실습](https://www.notion.so/b49bf50a65954eadb3831385a66f615c?pvs=21)
+:pencil2:[실습](https://www.notion.so/b49bf50a65954eadb3831385a66f615c?pvs=21)
 
 ## [AWS Cost and Usage Report (CUR)](https://us-east-1.console.aws.amazon.com/billing/home#/reports) - 비용 및 사용 보고서
 
@@ -31,7 +31,7 @@
 - ZIP 파일로 다운 받아 csv파일로 자세한 데이터 받아볼 수 있음 
 (어떤 서비스에 어떤 리소스가 얼마 만큼의 비용을 사용했는지 상세한 보고서를 받을 수 있음)
 
-[실습](https://www.notion.so/55cbe785d6774721821ed90be9ae3299?pvs=21)
+:pencil2:[실습](https://www.notion.so/55cbe785d6774721821ed90be9ae3299?pvs=21)
 
 # AWS 글로벌 인프라의 이해
 
@@ -73,24 +73,11 @@
 - 데이터 센터 안에 있는 물리적인 서버
 - 엣지 로케이션에 콘텐츠(데이터)를 캐싱하여 사용자에게 더 짧은 지연 시간으로 콘텐츠를 전송
 
-![Untitled](Section01/Untitled03.png)
+|일반적인 전송|엣지 네트워크 전송|
+|---|---|
+|![Untitled](Section01/Untitled03.png)|![Untitled](Section01/Untitled04.png)|
+|속도가 느림<br>1. 사용자가 콘텐츠를 요청하면 서버가 있는 리전의 오리진에서 전송|엣지 로케이션은 사용자 근처에 존재<br>가까운 거리에서 데이터를 받아오므로 사용자가 빠른 속도로 데이터를 받아오게 됨<br> 1. 사용자가 콘텐츠를 최초 요청하면 서버가 있는 리전의 오리진에서 사용자와 가까운 Edge Location으로 전송<br>2. 사용자는 지리적으로 가까운 Edge Location에서 콘텐츠 전송<br>3. 사용자가 이후 동일한 콘텐츠를 요청하면 Edge Location에서 콘텐츠 전송(캐싱)<br>오리진에서 데이터를 받아오지 않고 엣지 로케이션에서 받아오므로 더 빠르게 데이터를 전송받을 수 있음|
 
-속도가 느림 
-
-1. 사용자가 콘텐츠를 요청하면 서버가 있는 리전의 오리진에서 전송
-
-![Untitled](Section01/Untitled04.png)
-
-엣지 로케이션은 사용자 근처에 존재 
-
-가까운 거리에서 데이터를 받아오므로 사용자가 빠른 속도로 데이터를 받아오게 됨 
-
-1. 사용자가 콘텐츠를 최초 요청하면 서버가 있는 리전의 오리진에서 사용자와 가까운 Edge Location으로 전송
-2. 사용자는 지리적으로 가까운 Edge Location에서 콘텐츠 전송
-3. 사용자가 이후 동일한 콘텐츠를 요청하면 Edge Location에서 콘텐츠 전송(캐싱)
-    
-    오리진에서 데이터를 받아오지 않고 엣지 로케이션에서 받아오므로 더 빠르게 데이터를 전송받을 수 있음 
-    
 - 글로벌 배포서비스인 AWS CloudFront, Global Accelerator에서 대표적으로 사용
 - 전세계 수백개의 엣지 로케이션을 운영 중
     - 아프리카 지역은 리전이 없지만 엣지 로케이션은 운영하고 있음
@@ -100,4 +87,4 @@
 
 ![Untitled](Section01/Untitled05.png)
 
-[실습](https://www.notion.so/26729f3dbd554a27a1f8bd16983787af?pvs=21)
+:pencil2:[실습](https://www.notion.so/26729f3dbd554a27a1f8bd16983787af?pvs=21)
