@@ -35,7 +35,7 @@
 
 # AWS 글로벌 인프라의 이해
 
-![Untitled](Section01/Untitled.png)
+![Untitled](Untitled.png)
 
 - 리전 : 가용영역 위에 존재
 - 가용영역 : 하나 이상의 데이터 센터의 모음
@@ -43,7 +43,7 @@
 
 ## 리전 - Region
 
-![Untitled](Section01/Untitled01.png)
+![Untitled](Untitled01.png)
 
 - AWS는 전 세계 수십개의 지리적 리전에 가용영역을 운영 중
 - 데이터 센터가 모여진 물리적 위치
@@ -66,7 +66,7 @@
 
 ⇒ ***하나의 리전은 하나 이상의 데이터 센터로 구성된 2개 이상의 가용 영역으로 구성*** 
 
-![Untitled](Section01/Untitled02.png)
+![Untitled](Untitled02.png)
 
 ## 엣지 로케이션 (Edge Location)
 
@@ -75,7 +75,7 @@
 
 | 일반적인 전송                                             |엣지 네트워크 전송|
 |-----------------------------------------------------|---|
-| ![Untitled](Section01/Untitled03.png)               |![Untitled](Section01/Untitled04.png)|
+| ![Untitled](Untitled03.png)               |![Untitled](Untitled04.png)|
 | 속도가 느림<br><br>1. 사용자가 콘텐츠를 요청하면 서버가 있는 리전의 오리진에서 전송 |엣지 로케이션은 사용자 근처에 존재<br>가까운 거리에서 데이터를 받아오므로 사용자가 빠른 속도로 데이터를 받아오게 됨<br><br>1. 사용자가 콘텐츠를 최초 요청하면 서버가 있는 리전의 오리진에서 사용자와 가까운 Edge Location으로 전송<br>2. 사용자는 지리적으로 가까운 Edge Location에서 콘텐츠 전송<br>3. 사용자가 이후 동일한 콘텐츠를 요청하면 Edge Location에서 콘텐츠 전송(캐싱)<br><br>오리진에서 데이터를 받아오지 않고 엣지 로케이션에서 받아오므로 더 빠르게 데이터를 전송받을 수 있음|
 
 - 글로벌 배포서비스인 AWS CloudFront, Global Accelerator에서 대표적으로 사용
@@ -85,6 +85,6 @@
 - 엣지로케이션과 AWS 리전, 가용영역끼리는 고속 네트워크로 연결되어 있음
     - 빠른 속도로 데이터를 전송
 
-![Untitled](Section01/Untitled05.png)
+![Untitled](Untitled05.png)
 
 :pencil2:[실습](https://www.notion.so/26729f3dbd554a27a1f8bd16983787af?pvs=21)
