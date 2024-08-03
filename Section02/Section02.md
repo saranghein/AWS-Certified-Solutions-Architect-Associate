@@ -16,8 +16,9 @@
 
 # IAM 자격증명 - 사용자, 그룹, 역할, 정책
 
-![Untitled](Untitled.png)
-
+<p align="center">
+<img src="Untitled.png">
+</p>
 사용자 = 한 사람의 개인<br>
 역할 = 한 사람의 개인에 속하지 않고 누구에게나 할당할 수 있는 아이디 
 
@@ -46,8 +47,8 @@
 			"Condition":{
 				"condition":{
 					"key":"value"
-					}
 				}
+				
 			}
 		}
 	]
@@ -63,10 +64,10 @@
 
 <details><summary> IAM - JSON 정책 구문</summary>
 
-| <img src="Untitled1.png" width="300"/> | <div style="text-align: left"><ul><li> Lambda 서비스에 대한 정책이 명시<li>기본적으로 모든 권한을 허용<li>220.100.16.0/20 IP 네트워크로 부터의 함수 생성과 함수 삭제는 권한이 거부 됨</ul> </div> |
+| <img src="Untitled1.png" width="300"/> |<ul align="left"><li>Lambda 서비스에 대한 정책이 명시<li>기본적으로 모든 권한을 허용<li>220.100.16.0/20 IP 네트워크로 부터의 함수 생성과 함수 삭제는 권한이 거부 됨</ul>|
 |----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 
-| <img src="Untitled2.png" width="420"/> |<div style="text-align: left"><ul><li>EC2 서비스에 대한 정책이 명시<li>사용자 소스 IP 대역이 10.100.100.0/24 인 경우에만 ec2인스턴스를 종료할 수 있음<li>“StringNotEquals” : us-esast-1 리전이 아닌 경우에는(다른 리전에서 발생하는) 모든 작업이 거부 됨</li></ul><br>⇒ 사용자 소스 IP 가 10.100.100.0/24 대역인 경우에만 us-east-1리전의 ec2인스턴스를 종료할 수 있음</div>|
+| <img src="Untitled2.png" width="420"/> |<ul align="left"><li>EC2 서비스에 대한 정책이 명시<li>사용자 소스 IP 대역이 10.100.100.0/24 인 경우에만 ec2인스턴스를 종료할 수 있음<li>“StringNotEquals” : us-esast-1 리전이 아닌 경우에는(다른 리전에서 발생하는) 모든 작업이 거부 됨</li></ul><br>⇒ 사용자 소스 IP 가 10.100.100.0/24 대역인 경우에만 us-east-1리전의 ec2인스턴스를 종료할 수 있음|
 |----------------------------------------|---|
 
 </details>
@@ -85,8 +86,8 @@
 
 - IAM 사용자 또는 역할에 **최대 권한을 제한** 하는 기능
 - **AWS 전체 권한을 가지고 있어도 권한 경계에 대한 권한 범위로 축소되어 적용 됨**
-    
-![Untitled](Untitled3.png)
+
+<p align="center"><img src="Untitled3.png"></p>
     
 
 ## IAM 역할
@@ -135,7 +136,8 @@
 - 이 역할을 ec2 인스턴스에 할당을 하게 되면 이 ec2 인스턴스는 s3나 rd에 액세스해서 작업을 수행 할 수 있음
 </details>
 
-![Untitled](Untitled4.png)
+<p align="center">
+<img src="Untitled4.png"></p>
     
 
 ### IAM – 역할이 사용되는 시나리오 (IAM 사용자에게 역할 부여)
@@ -152,8 +154,8 @@ IAM 사용자에게 정책을 연결해서 AWS 서비스 액세스 하는 것이
     - 역할을 만들고 이 역할에 정책을 연결
     - 이 정책을 STS(임시 토큰 서비스) Assume role을 통해 IAM 유저와 연결
     - IAM 유저가 역할을 통해서 S3 서비스, RDS 서비스에 액세스할 수 있는 권한을 갖게 됨
-    
-    ![Untitled](Untitled5.png)
+    <p align="center">
+    <img src="Untitled5.png"></p>
     
 - 부여된 역할 사용 방법
     - IAM 콘솔을 사용하는 계정의 IAM 사용자가 역할을 전환하여 콘솔에서 해당 역할의 권한을 **임시로 사용**
@@ -165,8 +167,10 @@ IAM 사용자에게 정책을 연결해서 AWS 서비스 액세스 하는 것이
 - IAM 역할에 대한 리소스 기반 정책
 - 역할을 맡을 수 있는 **보안 주체**와 **조건**을 정의
 <details><summary>정책 예</summary>
-    
-![Untitled](Untitled6.png)
+	
+<p align="center">
+<img src="Untitled6.png">
+</p>
   
 - 역할을 만들 때 신뢰 정책을 생성, JSON 형식, 정책과 구조가 동일
 - sts:AssumeRole권한이 있는 보안 주체(297853362193 AWS 계정의 IAM사용자 Mone.Kim)이 역할을 맡을 수 있음
@@ -178,7 +182,7 @@ IAM 사용자에게 정책을 연결해서 AWS 서비스 액세스 하는 것이
 
 ### IAM - 사용자(User) vs 역할(Role)
 
-|<img src="Untitled7.png" alt="https://hackernoon.com/an-overview-of-users-vs-roles-in-aws-iam-y44f33at">| <div style="text-align:left"><ul><li> User는 사람을 위한 것 (한 사람)<li>Role은 AWS 리소스를 위한 것 <li>사람을 위한 권한이 아니면 **역할**을 부여<ul> <li>ec2 인스턴스가 aws 리소스에 접속을 하려면 역할을 써야 함</ul><li>사람을 위한 권한이고 teporary permission(임시 액세스 권한)을 줄 거면 **역할**을 사용(권한을 줬다가 다시 회수할 경우)<li>사람을 위한 권한이고 장기적인 액세스를 제공할 경우에는 **IAM 사용자** 사용<ul> </div> |
+|<img src="Untitled7.png" alt="https://hackernoon.com/an-overview-of-users-vs-roles-in-aws-iam-y44f33at">|<ul align="left"><li> User는 사람을 위한 것 (한 사람)<li>Role은 AWS 리소스를 위한 것 <li>사람을 위한 권한이 아니면 **역할**을 부여<ul> <li>ec2 인스턴스가 aws 리소스에 접속을 하려면 역할을 써야 함</ul><li>사람을 위한 권한이고 teporary permission(임시 액세스 권한)을 줄 거면 **역할**을 사용(권한을 줬다가 다시 회수할 경우)<li>사람을 위한 권한이고 장기적인 액세스를 제공할 경우에는 **IAM 사용자** 사용<ul> |
 |---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 # IAM 보안 도구(IAM Security Tools)
