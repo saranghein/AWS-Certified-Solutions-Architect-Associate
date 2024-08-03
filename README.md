@@ -1,7 +1,7 @@
 # AWS-Certidfied-Solutions-Archetect-Associate 자격증 내용 정리
 
 [AWS Certified Solutions Architect - Associate 자격증 준비하기](https://www.inflearn.com/course/aws-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%96%B4%EC%86%8C%EC%8B%9C%EC%97%90%EC%9D%B4%ED%8A%B8/dashboard) 를 수강하면서 작성했습니다. 
-첨부된 이미지, 내용에 대한 저작권은 해당 인강 사이트에 있고 허가를 받고 작성한 내용입니다. 
+첨부된 이미지, 내용에 대한 저작권은 해당 인강 사이트에 있습니다.
 
 자세한 내용이나 실습내용은 해당 인강에서 잘 다뤄주고 있으니 수강하시길 추천드립니다. 
 
