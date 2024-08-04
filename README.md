@@ -5,8 +5,8 @@
 
 자세한 내용이나 실습내용은 해당 인강에서 잘 다뤄주고 있으니 수강하시길 추천드립니다. 
 
-1. [Section01 - AWS 시작하기](Section01/Section01.md)
-2. [Section02 - Identity and Access Management(IAM)](Section02/Section02.md)
+1. [Section01 - AWS 시작하기](https://github.com/saranghein/AWS-Certified-Solutions-Architect-Associate/wiki/%F0%9F%A7%BE-Section01-%E2%80%90-AWS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
+2. [Section02 - Identity and Access Management(IAM)](https://github.com/saranghein/AWS-Certified-Solutions-Architect-Associate/wiki/%F0%9F%A7%BE-Section02-%E2%80%90-IAM)
 3. Section03 - 컴퓨팅 - EC2
 4. Section04 - Elastic Load Balancing(ELB)
 5. Section05 - EC2 Auto Scaling
